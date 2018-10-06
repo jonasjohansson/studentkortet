@@ -1,8 +1,12 @@
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
 body {
-	margin: 0px;
 	-webkit-user-select: none;
 	background-color: #353535;
-	font-family: 'Calibre Regular';
 }
 
 img {
@@ -23,6 +27,8 @@ img {
 	position: absolute;
 	width: 100%;
 	height: 100%;
+	top: 50%;
+	transform: translateY(-50%);
 	-webkit-transform-style: preserve-3d;
 	-webkit-transition-property: -webkit-transform;
 	-webkit-transition-duration: 400ms;
