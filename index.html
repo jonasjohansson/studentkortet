@@ -20,18 +20,14 @@
 	</div>
 	<script>
 		const card = document.querySelector('#card');
-
 		flip = () => {
-			console.log('clickx')
 			card.classList.toggle('flipped');
 		};
-
 		flop = () => {
 			var img = document.querySelector('img');
 			img.src = 'assets/';
 			img.src += Math.random() > 0.5 ? 'jonas.png' : 'rose.png';
 		};
-
 		flop();
 	</script>
 </body>
