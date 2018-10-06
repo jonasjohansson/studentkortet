@@ -8,23 +8,21 @@
 	<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-	<div id="container">
-		<div id="card" class="card" onclick="this.classList.toggle('flipped');">
-			<div id="front" class="front face">
-				<img src="assets/front.png">
-				<img id="id" src="">
-			</div>
-			<div id="back" class="back face">
-				<img src="assets/back.png">
-			</div>
+	<div id="card" onclick="this.classList.toggle('flipped');">
+		<div id="front" class="face">
+			<img id="id" src="">
+		</div>
+		<div id="back" class="face">
 		</div>
 	</div>
 	<script>
-		window.addEventListener('dblclick',e => {
+		fn = () => {
 			var id = document.querySelector('#id');
 			id.src = 'assets/';
 			id.src += (Math.random() > 0.5) ? 'jonas.png' : 'rose.png'
-		})
+		}
+		window.addEventListener('dblclick',fn);
+		window.addEventListener('touchmove',fn);
 	</script>
 </body>
 </html>
