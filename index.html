@@ -18,16 +18,15 @@
 		</div>
 	</div>
 	<script>
+		var url = window.location.href;
+		var who = url ? url.split('?')[1] : window.location.search.slice(1);
 		const card = document.querySelector('#card');
 		flip = () => {
 			card.classList.toggle('flipped');
 		};
-		flop = () => {
-			var img = document.querySelector('img');
-			img.src = 'assets/';
-			img.src += Math.random() > 0.5 ? 'jonas.png' : 'rose.png';
-		};
-		flop();
+		var img = document.querySelector('img');
+		img.src = 'assets/';
+		img.src += `${who}.png`;
 	</script>
 </body>
 </html>
